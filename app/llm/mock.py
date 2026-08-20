@@ -13,7 +13,7 @@ from app.llm.utils import (
     extract_price,
 )
 from app.schemas import ParsedQuery
-from base import QueryParser
+from app.llm.base import QueryParser
 
 
 class MockQueryParser(QueryParser):
