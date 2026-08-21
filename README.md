@@ -211,7 +211,7 @@ app/
 │   ├── utils.py     # extraction helpers (price/diet/location/category/keywords)
 │   └── factory.py   # selects parser via LLM_PROVIDER env var
 └── data/foods.json  # sample dataset
-tests/test_api.py    # 11 tests: endpoints, filters, ranking, error handling, dataset
+tests/test_api.py    # endpoints, filters, ranking, error handling, dataset validity
 ```
 
 ## Design decisions

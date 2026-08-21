@@ -1,7 +1,14 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 class SearchRequest(BaseModel):
     query: str = Field(..., min_length=1, max_length=500)
+
+    @field_validator("query")
+    @classmethod
+    def not_blank(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("query must not be blank")
+        return v
 
 class ParsedQuery(BaseModel):
     max_price: float | None = None

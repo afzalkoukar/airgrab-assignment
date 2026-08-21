@@ -27,6 +27,10 @@ def test_empty_query_rejected(client):
     assert client.post("/search", json={"query": ""}).status_code == 422
 
 
+def test_whitespace_query_rejected(client):
+    assert client.post("/search", json={"query": "   "}).status_code == 422
+
+
 def test_oversized_query_rejected(client):
     assert client.post("/search", json={"query": "x" * 501}).status_code == 422
 
