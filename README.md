@@ -21,7 +21,7 @@ uvicorn app.main:app --reload
 
 - Interactive API docs (Swagger UI): http://localhost:8000/docs
 - Health check: `curl localhost:8000/health`
-- Run the test suite: `pytest -v`
+- Run the test suite: `python -m pytest -v`
 
 No configuration is required: the parser defaults to the mock provider
 (`LLM_PROVIDER=mock`). To configure explicitly, `cp .env.example .env` — the app
