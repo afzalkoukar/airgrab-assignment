@@ -9,8 +9,8 @@ Built with FastAPI. Python 3.12+.
 ## How to run
 
 ```bash
-git clone <repo-url>
-cd airgrab
+git clone https://github.com/afzalkoukar/airgrab-assignment.git
+cd airgrab-assignment
 
 python3 -m venv .venv
 source .venv/bin/activate
